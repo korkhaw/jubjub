@@ -43,14 +43,21 @@ document.addEventListener("DOMContentLoaded", () => {
   slider.appendChild(firstClone);
   slider.insertBefore(lastClone, slides[0]);
 
-  const allSlides = document.querySelectorAll(".gallery-item");
+  let allSlides = document.querySelectorAll(".gallery-item");
   let currentIndex = 1;
-  const slideWidth = allSlides[0].clientWidth;
+  let slideWidth = slider.clientWidth;
 
-  slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  function updateWidth() {
+    slideWidth = slider.clientWidth;
+    slider.style.transition = "none";
+    slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  }
+
+  window.addEventListener("resize", updateWidth);
+  updateWidth();
 
   function moveToSlide() {
-    slider.style.transition = "transform 0.4s ease-in-out";
+    slider.style.transition = "transform 0.45s ease-in-out";
     slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
   }
 
@@ -65,11 +72,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   slider.addEventListener("transitionend", () => {
+    allSlides = document.querySelectorAll(".gallery-item");
+
     if (allSlides[currentIndex].isEqualNode(firstClone)) {
       slider.style.transition = "none";
       currentIndex = 1;
       slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
     }
+
     if (allSlides[currentIndex].isEqualNode(lastClone)) {
       slider.style.transition = "none";
       currentIndex = allSlides.length - 2;
@@ -77,4 +87,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
