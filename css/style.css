@@ -504,10 +504,10 @@ body {
   }
 
   .gallery-btn.prev {
-    left: -55px;
+    left: -45px;
   }
 
   .gallery-btn.next {
-    right: -55px;
+    right: -45px;
   }
 }
