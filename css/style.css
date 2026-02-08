@@ -485,3 +485,16 @@ body {
 .gallery-btn.next {
   margin-left: 20px;
 }
+
+@media (max-width: 600px) {
+  .gallery-container {
+    max-width: 90%;
+    aspect-ratio: 18 / 12;
+  }
+
+  .arrow-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+}
