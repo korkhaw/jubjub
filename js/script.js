@@ -29,3 +29,52 @@ function openLetter() {
 function closeLetter() {
   document.getElementById("letterOverlay").style.display = "none";
 }
+
+// ===== เฉพาะหน้า memories =====
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById("slider");
+  const slides = document.querySelectorAll(".gallery-item");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+
+  slider.appendChild(firstClone);
+  slider.insertBefore(lastClone, slides[0]);
+
+  const allSlides = document.querySelectorAll(".gallery-item");
+  let currentIndex = 1;
+  const slideWidth = allSlides[0].clientWidth;
+
+  slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+
+  function moveToSlide() {
+    slider.style.transition = "transform 0.4s ease-in-out";
+    slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    moveToSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex--;
+    moveToSlide();
+  });
+
+  slider.addEventListener("transitionend", () => {
+    if (allSlides[currentIndex].isEqualNode(firstClone)) {
+      slider.style.transition = "none";
+      currentIndex = 1;
+      slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+    if (allSlides[currentIndex].isEqualNode(lastClone)) {
+      slider.style.transition = "none";
+      currentIndex = allSlides.length - 2;
+      slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+  });
+});
+
