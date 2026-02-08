@@ -492,6 +492,47 @@ body {
 
 /* มือถือ */
 @media (max-width: 300px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main-card h1 {
+    font-size: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .members-section h1 {
+    font-size: 26px;
+  }
+
+  .members-subtitle {
+    font-size: 14px;
+  }
+
+  .member-card h3 {
+    font-size: 18px;
+  }
+
+  .member-card p,
+  .member-card a {
+    font-size: 13px;
+  }
+
+  .letter-box h2 {
+    font-size: 22px;
+  }
+
+  .letter-box p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
   .gallery-container {
     max-width: 92%;
     aspect-ratio: 18 / 12;
@@ -504,8 +545,13 @@ body {
   }
 
   .gallery-btn.prev {
-    left: -35px;
+    left: -45px;
   }
+
+  .gallery-btn.next {
+    right: -45px;
+  }
+}
 
   .gallery-btn.next {
     right: -35px;
