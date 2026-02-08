@@ -491,47 +491,36 @@ body {
 }
 
 /* มือถือ */
-@media (max-width: 300px) {
+@media (max-width: 600px) {
   body {
-    font-size: 14px;
+    font-size: 13px !important;
   }
 
-  .main-card h1 {
-    font-size: 24px;
+  h1 {
+    font-size: 22px !important;
   }
 
-  .hero-content h1 {
-    font-size: 26px;
+  h2 {
+    font-size: 18px !important;
   }
 
-  .hero-content p {
-    font-size: 14px;
+  p,
+  a,
+  span {
+    font-size: 13px !important;
   }
 
-  .members-section h1 {
-    font-size: 26px;
-  }
-
-  .members-subtitle {
-    font-size: 14px;
+  .navbar a {
+    font-size: 14px !important;
   }
 
   .member-card h3 {
-    font-size: 18px;
-  }
-
-  .member-card p,
-  .member-card a {
-    font-size: 13px;
-  }
-
-  .letter-box h2 {
-    font-size: 22px;
+    font-size: 16px !important;
   }
 
   .letter-box p {
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 13px !important;
+    line-height: 1.7 !important;
   }
   .gallery-container {
     max-width: 92%;
@@ -553,7 +542,3 @@ body {
   }
 }
 
-  .gallery-btn.next {
-    right: -35px;
-  }
-}
