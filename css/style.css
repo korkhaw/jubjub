@@ -491,7 +491,7 @@ body {
 }
 
 /* มือถือ */
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   .gallery-container {
     max-width: 92%;
     aspect-ratio: 18 / 12;
