@@ -523,3 +523,24 @@ body {
     line-height: 1.7 !important;
   }
 }
+
+/* กันหน้าเว็บเลื่อนซ้ายขวา */
+body {
+  overflow-x: hidden;
+}
+
+/* บังคับรูปไม่เกินกรอบ */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* กัน container ล้นจอ */
+.gallery,
+.gallery-container,
+.gallery-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
