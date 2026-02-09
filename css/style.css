@@ -591,7 +591,7 @@ body {
 .gallery-item {
   width: 100%;
   flex-shrink: 0;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   border-radius: 20px;
 }
