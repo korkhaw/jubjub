@@ -613,15 +613,15 @@ body {
 }
 
 .gallery-btn.prev {
-  left: -55px;
+  left: 10px;
 }
 
 .gallery-btn.next {
-  right: -55px;
+  right: 10px;
 }
 
 /* มือถือ: ให้ปุ่มเข้ามาใกล้รูป */
 @media (max-width: 600px) {
-  .gallery-btn.prev { left: 5px; }
-  .gallery-btn.next { right: 5px; }
+  .gallery-btn.prev { left: -5px; }
+  .gallery-btn.next { right: -5px; }
 }
