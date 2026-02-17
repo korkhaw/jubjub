@@ -613,11 +613,11 @@ body {
 }
 
 .gallery-btn.prev {
-  left: -40px;
+  left: -55px;
 }
 
 .gallery-btn.next {
-  right: -40px;
+  right: -55px;
 }
 
 /* มือถือ: ให้ปุ่มเข้ามาใกล้รูป */
